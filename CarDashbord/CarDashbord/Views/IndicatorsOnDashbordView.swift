@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct IndicatorsOnDashbordView: View {
-    let topIndicators: [Indicators.IndicatorClasses] = [.abs11, .airBag2]
-    let leftIndicators: [Indicators.IndicatorClasses] = [.abs11, .airBag2, .doors3, .engineIcon0]
-    let tralingIndicators: [Indicators.IndicatorClasses] = [.abs11, .airBag2, .wheel5, .cruiseControl4]
+    let topIndicators: [Indicators.IndicatorClasses?]
+    let leftIndicators: [Indicators.IndicatorClasses?]
+    let tralingIndicators: [Indicators.IndicatorClasses?]
+    
     
     var body: some View {
         ZStack {
@@ -20,10 +21,15 @@ struct IndicatorsOnDashbordView: View {
             
             HStack {
                 ForEach(topIndicators, id: \.self) { indicator in
-                    indicator.image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxHeight: 10)
+                    if let indicator = indicator {
+                        indicator.image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxHeight: 10)
+                    } else {
+                        EmptyView()
+                    }
+                    
                 }
             }
             .padding(.trailing, 8)
@@ -32,19 +38,27 @@ struct IndicatorsOnDashbordView: View {
             VStack {
                 HStack {
                     ForEach(leftIndicators, id: \.self) { indicator in
-                        indicator.image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxHeight: 10)
+                        if let indicator = indicator {
+                            indicator.image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxHeight: 10)
+                        } else {
+                            EmptyView()
+                        }
                     }
                     
                     Spacer()
                     
                     ForEach(tralingIndicators, id: \.self) { indicator in
-                        indicator.image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxHeight: 10)
+                        if let indicator = indicator {
+                            indicator.image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(maxHeight: 10)
+                        } else {
+                            EmptyView()
+                        }
                     }
                 }
                 .padding(.top, 140)
@@ -55,5 +69,5 @@ struct IndicatorsOnDashbordView: View {
 }
 
 #Preview {
-    IndicatorsOnDashbordView()
+    IndicatorsOnDashbordView(topIndicators: [.airBag2 ], leftIndicators: [.abs11], tralingIndicators: [.break10, .doors3])
 }

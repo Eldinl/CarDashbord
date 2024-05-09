@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(spacing: 40) {
                 NavigationLink {
                     //
@@ -19,7 +19,7 @@ struct ContentView: View {
                 }
                 
                 NavigationLink {
-                    //
+                    DashbordView()
                 } label: {
                     Text("Dashbord")
                         .font(.title)

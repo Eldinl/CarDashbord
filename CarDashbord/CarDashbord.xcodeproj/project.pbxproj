@@ -17,6 +17,8 @@
 		B3572A472BEC1E3600B27757 /* Indicators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3572A462BEC1E3600B27757 /* Indicators.swift */; };
 		B3572A492BEC240700B27757 /* L10.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3572A482BEC240700B27757 /* L10.swift */; };
 		B36A7C3B2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A7C3A2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift */; };
+		B36A7C3D2BED6FF80096E72D /* AllIndicatorsImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A7C3C2BED6FF80096E72D /* AllIndicatorsImagesView.swift */; };
+		B36A7C3F2BED74B00096E72D /* IdentifiableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A7C3E2BED74B00096E72D /* IdentifiableImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		B3572A462BEC1E3600B27757 /* Indicators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicators.swift; sourceTree = "<group>"; };
 		B3572A482BEC240700B27757 /* L10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10.swift; sourceTree = "<group>"; };
 		B36A7C3A2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsOnDashbordView.swift; sourceTree = "<group>"; };
+		B36A7C3C2BED6FF80096E72D /* AllIndicatorsImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIndicatorsImagesView.swift; sourceTree = "<group>"; };
+		B36A7C3E2BED74B00096E72D /* IdentifiableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				B3572A302BEC0D8600B27757 /* ContentView.swift */,
 				B3572A3C2BEC117300B27757 /* DashbordView.swift */,
 				B36A7C3A2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift */,
+				B36A7C3C2BED6FF80096E72D /* AllIndicatorsImagesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				B3572A462BEC1E3600B27757 /* Indicators.swift */,
+				B36A7C3E2BED74B00096E72D /* IdentifiableImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -191,10 +197,12 @@
 				B3572A492BEC240700B27757 /* L10.swift in Sources */,
 				B3572A312BEC0D8600B27757 /* ContentView.swift in Sources */,
 				B3572A2F2BEC0D8600B27757 /* CarDashbordApp.swift in Sources */,
+				B36A7C3D2BED6FF80096E72D /* AllIndicatorsImagesView.swift in Sources */,
 				B3572A452BEC1B1100B27757 /* DashbordViewModel.swift in Sources */,
 				B3572A3D2BEC117300B27757 /* DashbordView.swift in Sources */,
 				B3572A402BEC11BA00B27757 /* ImageExtension.swift in Sources */,
 				B3572A472BEC1E3600B27757 /* Indicators.swift in Sources */,
+				B36A7C3F2BED74B00096E72D /* IdentifiableImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
