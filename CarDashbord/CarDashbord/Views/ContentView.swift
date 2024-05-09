@@ -15,14 +15,14 @@ struct ContentView: View {
                     //
                 } label: {
                     Text("ML Model")
-                        .font(.largeTitle)
+                        .font(.title)
                 }
                 
                 NavigationLink {
                     //
                 } label: {
                     Text("Dashbord")
-                        .font(.largeTitle)
+                        .font(.title)
                 }
 
             }

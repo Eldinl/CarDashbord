@@ -13,19 +13,35 @@ struct DashbordView: View {
     var body: some View {
         VStack {
             ScrollView(showsIndicators: false) {
-                ForEach(viewModel.allIndicators, id: \.self) { image in
+                ForEach(viewModel.allIndicators, id: \.self) { indicator in
                     Button(action: {
-                        
+                        viewModel.addIndicator(indicator: indicator)
                     }, label: {
                         HStack {
-                            image.image
+                            indicator.image
                                 .resizable()
-                                .frame(width: 40, height: 40)
+                                .frame(width: 45, height: 40)
                                 .scaledToFit()
-    //                        Text()
+                            
+                            Spacer()
+                            
+                            Text(indicator.text)
+                                .font(.subheadline)
+                            
+                            Spacer()
+                            
+                            RoundedRectangle(cornerRadius: 25.0)
+                                .stroke(.black, lineWidth: 2)
+                                .fill(viewModel.selectedIndicatiors.contains(indicator) ? .green : .clear)
+                                .frame(maxWidth: 40)
                         }
                     })
+                    .padding(.vertical, 5)
                 }
+                .padding()
+            }
+            NavigationLink("Create") {
+                EmptyView()
             }
         }
         .navigationTitle("Dashbord")
@@ -34,5 +50,7 @@ struct DashbordView: View {
 
 
 #Preview {
-    DashbordView()
+    NavigationView {
+        DashbordView()
+    }
 }

@@ -16,6 +16,7 @@
 		B3572A452BEC1B1100B27757 /* DashbordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3572A442BEC1B1100B27757 /* DashbordViewModel.swift */; };
 		B3572A472BEC1E3600B27757 /* Indicators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3572A462BEC1E3600B27757 /* Indicators.swift */; };
 		B3572A492BEC240700B27757 /* L10.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3572A482BEC240700B27757 /* L10.swift */; };
+		B36A7C3B2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A7C3A2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		B3572A442BEC1B1100B27757 /* DashbordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashbordViewModel.swift; sourceTree = "<group>"; };
 		B3572A462BEC1E3600B27757 /* Indicators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicators.swift; sourceTree = "<group>"; };
 		B3572A482BEC240700B27757 /* L10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10.swift; sourceTree = "<group>"; };
+		B36A7C3A2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsOnDashbordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				B3572A302BEC0D8600B27757 /* ContentView.swift */,
 				B3572A3C2BEC117300B27757 /* DashbordView.swift */,
+				B36A7C3A2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B36A7C3B2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift in Sources */,
 				B3572A492BEC240700B27757 /* L10.swift in Sources */,
 				B3572A312BEC0D8600B27757 /* ContentView.swift in Sources */,
 				B3572A2F2BEC0D8600B27757 /* CarDashbordApp.swift in Sources */,
@@ -330,8 +334,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -359,8 +363,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
