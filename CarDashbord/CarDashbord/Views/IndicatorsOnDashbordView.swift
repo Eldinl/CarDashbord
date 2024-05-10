@@ -16,52 +16,54 @@ struct IndicatorsOnDashbordView: View {
     var body: some View {
         ZStack {
             Image.image.dashbord
-                .resizable()
-                .scaledToFit()
+
             
-            HStack {
+            HStack(spacing: 60) {
                 ForEach(topIndicators, id: \.self) { indicator in
                     if let indicator = indicator {
                         indicator.image
                             .resizable()
                             .scaledToFit()
-                            .frame(maxHeight: 10)
+                            .frame(maxHeight: 80)
                     } else {
                         EmptyView()
                     }
                     
                 }
             }
-            .padding(.trailing, 8)
-            .padding(.bottom, 20)
+            .padding(.trailing, 50)
+            .padding(.bottom, 100)
             
             VStack {
-                HStack {
+                HStack(spacing: 20) {
+                    Spacer()
+                
                     ForEach(leftIndicators, id: \.self) { indicator in
                         if let indicator = indicator {
                             indicator.image
                                 .resizable()
                                 .scaledToFit()
-                                .frame(maxHeight: 10)
+                                .frame(maxHeight: 80)
                         } else {
                             EmptyView()
                         }
                     }
-                    
-                    Spacer()
                     
                     ForEach(tralingIndicators, id: \.self) { indicator in
                         if let indicator = indicator {
                             indicator.image
                                 .resizable()
                                 .scaledToFit()
-                                .frame(maxHeight: 10)
+                                .frame(maxHeight: 80)
                         } else {
                             EmptyView()
                         }
                     }
+                    
+                    Spacer()
                 }
-                .padding(.top, 140)
+                .padding(.bottom)
+                .padding(.top, 830)
                 .padding(.horizontal)
             }
         }
@@ -69,5 +71,5 @@ struct IndicatorsOnDashbordView: View {
 }
 
 #Preview {
-    IndicatorsOnDashbordView(topIndicators: [.airBag2 ], leftIndicators: [.abs11], tralingIndicators: [.break10, .doors3])
+    IndicatorsOnDashbordView(topIndicators: [.airBag2, .battery7], leftIndicators: [.abs11, .belt12, .doors3, .blindSpots15], tralingIndicators: [.break10, .doors3, .fuel13, .laneHelp16])
 }

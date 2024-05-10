@@ -12,6 +12,9 @@ class DashbordViewModel: ObservableObject {
     @Published var limitIsExceeded: Bool = false
     @Published var resultImages: [IdentifiableImage] = []
     
+    @Published var randomImagesCount: String = ""
+    @Published var statusCount: Int = 0
+    
     var topIndicators: [Indicators.IndicatorClasses?] = []
     var leftIndicators: [Indicators.IndicatorClasses?] = []
     var tralingIndicators: [Indicators.IndicatorClasses?] = []
@@ -32,24 +35,16 @@ class DashbordViewModel: ObservableObject {
     
     @MainActor
     func splitIndicators(displayScale: CGFloat) {
-        var splitFunctions: [()] = [self.splitTopIndicators(), self.splitLeftIndicators(), self.splitTralingIndicators()]
-        
-        let first: ()? = splitFunctions.popLast()
-        first
-        
-        let second: ()? = splitFunctions.popLast()
-        second
-        
-        let third: ()? = splitFunctions.popLast()
-        third
-        
+        splitTopIndicators()
+        splitLeftIndicators()
+        splitTralingIndicators()
         
         let renderer = ImageRenderer(content: IndicatorsOnDashbordView(topIndicators: topIndicators, leftIndicators: leftIndicators, tralingIndicators: tralingIndicators))
         
         renderer.scale = displayScale
         
         if let uiImage = renderer.uiImage {
-            resultImages.append(IdentifiableImage(image: Image(uiImage: uiImage)))
+            resultImages.append(IdentifiableImage(image: uiImage))
         }
         
     }
@@ -84,4 +79,43 @@ class DashbordViewModel: ObservableObject {
             }
         }
     }
+    
+    func saveImage() {
+        for image in resultImages {
+            UIImageWriteToSavedPhotosAlbum(image.image, nil, nil, nil)
+        }
+    }
+    
+    @MainActor
+    func makeRandomImages(displayScale: CGFloat) {
+        if let count = Int(randomImagesCount) {
+            for _ in 1...count {
+                selectedIndicatiors = []
+                topIndicators = []
+                leftIndicators = []
+                tralingIndicators = []
+                let randomIndicatorCount = Int.random(in: 1...10)
+                var allIndicators = Indicators.IndicatorClasses.allCases
+                for _ in 0...randomIndicatorCount {
+                    var randomIndicator = allIndicators.randomElement()
+                    if let randomIndicator = randomIndicator {
+                        var indicatorIndex = allIndicators.firstIndex(of: randomIndicator)
+                        if let indicatorIndex = indicatorIndex {
+                            selectedIndicatiors.append(randomIndicator)
+                            allIndicators.remove(at: indicatorIndex)
+                        }
+                    }
+                }
+                statusCount += 1
+                splitIndicators(displayScale: displayScale)
+            }
+            
+            saveImage()
+            statusCount = 0
+            resultImages = []
+        }
+    }
 }
+
+
+

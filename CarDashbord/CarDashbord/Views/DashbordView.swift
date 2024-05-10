@@ -12,6 +12,7 @@ struct DashbordView: View {
     @Environment(\.displayScale) var displayScale
     
     @State var isSelectingDone: Bool = false
+    @State var isRandom: Bool = false
     
     var body: some View {
         VStack {
@@ -46,9 +47,21 @@ struct DashbordView: View {
             .navigationDestination(isPresented: $isSelectingDone) {
                 AllIndicatorsImagesView(viewModel: viewModel)
             }
-            NavigationLink("Create") {
-                EmptyView()
+
+            Button(action: {
+                viewModel.splitIndicators(displayScale: displayScale)
+                isSelectingDone = true
+                
+            }, label: {
+                Text("Create")
+            })
+            
+            NavigationLink {
+                RandomizerView(viewModel: viewModel)
+            } label: {
+                Text("Random")
             }
+
         }
         .navigationTitle("Dashbord")
     }
