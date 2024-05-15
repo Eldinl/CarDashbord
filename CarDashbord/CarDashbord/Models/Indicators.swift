@@ -32,43 +32,43 @@ struct Indicators {
         var image: Image {
             switch self {
                 case .engineIcon0:
-                    return Image("0")
+                    return Image.image.dashbordImageClasses.engineIcon0
                 case .oilIcon1:
-                    return Image("1")
+                    return Image.image.dashbordImageClasses.oilIcon1
                 case .airBag2:
-                    return Image("2")
+                    return Image.image.dashbordImageClasses.airBag2
                 case .doors3:
-                    return Image("3")
+                    return Image.image.dashbordImageClasses.doors3
                 case .cruiseControl4:
-                    return Image("4")
+                    return Image.image.dashbordImageClasses.cruiseControl4
                 case .wheel5:
-                    return Image("5")
+                    return Image.image.dashbordImageClasses.wheel5
                 case .esc6:
-                    return Image("6")
+                    return Image.image.dashbordImageClasses.esc6
                 case .battery7:
-                    return Image("7")
+                    return Image.image.dashbordImageClasses.battery7
                 case .escOff8:
-                    return Image("8")
+                    return Image.image.dashbordImageClasses.escOff8
                 case .tiresPressure9:
-                    return Image("9")
+                    return Image.image.dashbordImageClasses.tiresPressure9
                 case .break10:
-                    return Image("10")
+                    return Image.image.dashbordImageClasses.break10
                 case .abs11:
-                    return Image("11")
+                    return Image.image.dashbordImageClasses.abs11
                 case .belt12:
-                    return Image("12")
+                    return Image.image.dashbordImageClasses.belt12
                 case .fuel13:
-                    return Image("13")
+                    return Image.image.dashbordImageClasses.fuel13
                 case .parkingBreak14:
-                    return Image("14")
+                    return Image.image.dashbordImageClasses.parkingBreak14
                 case .blindSpots15:
-                    return Image("15")
+                    return Image.image.dashbordImageClasses.blindSpots15
                 case .laneHelp16:
-                    return Image("16")
+                    return Image.image.dashbordImageClasses.laneHelp16
                 case .collisionAssistance17:
-                    return Image("17")
+                    return Image.image.dashbordImageClasses.collisionAssistance17
                 case .mainLamp18:
-                    return Image("18")
+                    return Image.image.dashbordImageClasses.mainLamp18
             }
         }
         
@@ -112,6 +112,16 @@ struct Indicators {
                     return L10.IndicatorNames.collisionAssistance17
                 case .mainLamp18:
                     return L10.IndicatorNames.mainLamp18
+            }
+        }
+        var description: String {
+            switch self {
+                case .engineIcon0:
+                    return "Индикатор, загоревшийся после запуска двигателя, информирует о неисправности двигателя, влияющей на качество выхлопных газов. "
+                case .oilIcon1:
+                    return "Индикатор информирует о недостатке моторного масла."
+                default:
+                    return ""
             }
         }
     }

@@ -20,6 +20,10 @@
 		B36A7C3B2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A7C3A2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift */; };
 		B36A7C3D2BED6FF80096E72D /* AllIndicatorsImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A7C3C2BED6FF80096E72D /* AllIndicatorsImagesView.swift */; };
 		B36A7C3F2BED74B00096E72D /* IdentifiableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36A7C3E2BED74B00096E72D /* IdentifiableImage.swift */; };
+		B3BBC62E2BF51B3400F16390 /* DetectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BBC62D2BF51B3400F16390 /* DetectionViewModel.swift */; };
+		B3BBC6302BF51BDC00F16390 /* DetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BBC62F2BF51BDC00F16390 /* DetectionView.swift */; };
+		B3BBC6322BF51C6000F16390 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BBC6312BF51C6000F16390 /* ImagePickerView.swift */; };
+		B3BBC6342BF529EB00F16390 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BBC6332BF529EB00F16390 /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		B36A7C3A2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsOnDashbordView.swift; sourceTree = "<group>"; };
 		B36A7C3C2BED6FF80096E72D /* AllIndicatorsImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIndicatorsImagesView.swift; sourceTree = "<group>"; };
 		B36A7C3E2BED74B00096E72D /* IdentifiableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableImage.swift; sourceTree = "<group>"; };
+		B3BBC62D2BF51B3400F16390 /* DetectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionViewModel.swift; sourceTree = "<group>"; };
+		B3BBC62F2BF51BDC00F16390 /* DetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionView.swift; sourceTree = "<group>"; };
+		B3BBC6312BF51C6000F16390 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		B3BBC6332BF529EB00F16390 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				B3572A302BEC0D8600B27757 /* ContentView.swift */,
-				B3572A3C2BEC117300B27757 /* DashbordView.swift */,
-				B35A13832BEEB10C00AA468E /* RandomizerView.swift */,
-				B36A7C3A2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift */,
-				B36A7C3C2BED6FF80096E72D /* AllIndicatorsImagesView.swift */,
+				B3BBC62C2BF51B0100F16390 /* Detection */,
+				B3BBC6292BF5186700F16390 /* Dashbord */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				B3572A442BEC1B1100B27757 /* DashbordViewModel.swift */,
+				B3BBC62D2BF51B3400F16390 /* DetectionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,6 +131,27 @@
 				B36A7C3E2BED74B00096E72D /* IdentifiableImage.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B3BBC6292BF5186700F16390 /* Dashbord */ = {
+			isa = PBXGroup;
+			children = (
+				B3572A3C2BEC117300B27757 /* DashbordView.swift */,
+				B36A7C3A2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift */,
+				B35A13832BEEB10C00AA468E /* RandomizerView.swift */,
+				B36A7C3C2BED6FF80096E72D /* AllIndicatorsImagesView.swift */,
+			);
+			path = Dashbord;
+			sourceTree = "<group>";
+		};
+		B3BBC62C2BF51B0100F16390 /* Detection */ = {
+			isa = PBXGroup;
+			children = (
+				B3BBC62F2BF51BDC00F16390 /* DetectionView.swift */,
+				B3BBC6332BF529EB00F16390 /* ResultView.swift */,
+				B3BBC6312BF51C6000F16390 /* ImagePickerView.swift */,
+			);
+			path = Detection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,10 +226,14 @@
 			files = (
 				B36A7C3B2BED4FFB0096E72D /* IndicatorsOnDashbordView.swift in Sources */,
 				B3572A492BEC240700B27757 /* L10.swift in Sources */,
+				B3BBC62E2BF51B3400F16390 /* DetectionViewModel.swift in Sources */,
 				B3572A312BEC0D8600B27757 /* ContentView.swift in Sources */,
+				B3BBC6322BF51C6000F16390 /* ImagePickerView.swift in Sources */,
+				B3BBC6342BF529EB00F16390 /* ResultView.swift in Sources */,
 				B3572A2F2BEC0D8600B27757 /* CarDashbordApp.swift in Sources */,
 				B36A7C3D2BED6FF80096E72D /* AllIndicatorsImagesView.swift in Sources */,
 				B3572A452BEC1B1100B27757 /* DashbordViewModel.swift in Sources */,
+				B3BBC6302BF51BDC00F16390 /* DetectionView.swift in Sources */,
 				B3572A3D2BEC117300B27757 /* DashbordView.swift in Sources */,
 				B3572A402BEC11BA00B27757 /* ImageExtension.swift in Sources */,
 				B3572A472BEC1E3600B27757 /* Indicators.swift in Sources */,

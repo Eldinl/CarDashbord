@@ -14,6 +14,7 @@ extension Image {
 struct DashbordImages {
     let dashbordImageClasses = DashbordImageClasses()
     let dashbord = Image("final")
+    let testDashbord = Image("testImage")
     
     struct DashbordImageClasses {
         let engineIcon0 = Image("0")

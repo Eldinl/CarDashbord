@@ -12,7 +12,7 @@ struct ContentView: View {
         NavigationStack {
             VStack(spacing: 40) {
                 NavigationLink {
-                    //
+                    DetectionView()
                 } label: {
                     Text("ML Model")
                         .font(.title)
