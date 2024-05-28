@@ -47,23 +47,36 @@ struct DashbordView: View {
             .navigationDestination(isPresented: $isSelectingDone) {
                 AllIndicatorsImagesView(viewModel: viewModel)
             }
-
-            Button(action: {
-                viewModel.splitIndicators(displayScale: displayScale)
-                isSelectingDone = true
-                
-            }, label: {
-                Text("Create")
-            })
             
-            NavigationLink {
-                RandomizerView(viewModel: viewModel)
-            } label: {
-                Text("Random")
+            VStack {
+                Button(action: {
+                    viewModel.splitIndicators(displayScale: displayScale)
+                    isSelectingDone = true
+                    
+                }, label: {
+                    Text("Создать")
+                        .foregroundStyle(.black)
+                        .frame(width: 350, height: 30)
+                        .background(
+                            Color.green.opacity(0.7)
+                        )
+                })
+                
+                NavigationLink {
+                    RandomizerView(viewModel: viewModel)
+                } label: {
+                    Text("Сгенерировать случайно")
+                        .foregroundStyle(.black)
+                        .frame(width: 350, height: 30)
+                        .background(
+                            Color.green.opacity(0.7)
+                        )
+                }
             }
+            .frame(height: 70)
 
         }
-        .navigationTitle("Dashbord")
+        .navigationTitle("Приборная панель")
     }
 }
 

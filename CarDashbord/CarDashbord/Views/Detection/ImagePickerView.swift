@@ -20,8 +20,12 @@ struct ImagePickerView: View {
                 matching: .images,
                 photoLibrary: .shared()
             ) {
-                Text("Get Images from gallery")
+                Text("Выбрать изображение из галереи")
+                    .foregroundStyle(.black)
                     .frame(width: 350, height: 50)
+                    .background(
+                        Color.green.opacity(0.7)
+                    )
             }
             .onChange(of: selectedItem, {
                 Task { @MainActor in
@@ -32,7 +36,6 @@ struct ImagePickerView: View {
                 }
             })
         }
-        .padding()
+//        .padding()
     }
 }
-

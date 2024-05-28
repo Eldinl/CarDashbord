@@ -18,22 +18,31 @@ struct DetectionView: View {
                     .scaledToFit()
             }
             
-            
             VStack(spacing: 5) {
                 ImagePickerView(viewModel: viewModel)
                 Button {
                     //
                 } label: {
-                    Text("Get Images from camera")
+                    Text("Снять новое изображение")
+                        .foregroundStyle(.black)
                         .frame(width: 350, height: 50)
+                        .background(
+                            Color.green.opacity(0.7)
+                        )
                 }
             }
         }
+        .padding(.bottom)
         
         NavigationLink {
             ResultView(viewModel: viewModel)
         } label: {
-            Text("Check")
+            Text("Проверить")
+                .foregroundStyle(.black)
+                .frame(width: 350, height: 50)
+                .background(
+                    Color.red.opacity(0.7)
+                )
         }
 
     }
